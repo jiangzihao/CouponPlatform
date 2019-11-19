@@ -1,0 +1,30 @@
+{
+  "name": "couponplatformserver",
+  "version": "1.0.0",
+  "description": "软件工程方法论大作业",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangzihao/CouponPlatform.git"
+  },
+  "keywords": [
+    "coupon"
+  ],
+  "author": "jzh123s",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiangzihao/CouponPlatform/issues"
+  },
+  "homepage": "https://github.com/jiangzihao/CouponPlatform#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "log4js": "^6.0.0",
+    "mongoose": "^5.7.11"
+  }
+}
