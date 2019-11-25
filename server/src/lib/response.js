@@ -8,10 +8,7 @@ const { logger } = require('./logger')
 function responseHandler (ctx) {
   if (ctx.result !== undefined) {
     ctx.type = 'json'
-    ctx.body = {
-      success: true,
-      data: ctx.result === emptyResponse ? undefined : ctx.result
-    }
+    ctx.body = ctx.result === emptyResponse ? undefined : ctx.result
   }
 }
 
@@ -23,9 +20,8 @@ function errorHandler (ctx, next) {
     logger.error(err.message.trim())
 
     ctx.body = {
-      success: false,
       code: err.code || -1,
-      message: err.message.trim()
+      errMsg: err.message.trim()
     }
 
     ctx.status = 200      // 保证返回状态是 200, 这样前端不会抛出异常
