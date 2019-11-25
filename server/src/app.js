@@ -14,7 +14,7 @@ const app = new Koa()
 const router = require('./routes').prefix('/api')
 
 // 先require一次db来连接数据库
-// require('./lib/db')
+require('./lib/db')
 
 app.use(loggerMiddleware)
 app.use(errorHandler)
